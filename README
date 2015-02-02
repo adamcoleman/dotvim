@@ -1,4 +1,10 @@
-ln -s ~/.vim/vimrc ~/.vimrc
-ln -s ~/.vim/gvimrc ~/.gvimrc
+Installation:
+
+    git clone https://github.com/adamcoleman/dotvim.git
+
+Create symlinks:
+
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/gvimrc ~/.gvimrc
 
 
