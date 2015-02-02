@@ -1,0 +1,22 @@
+// import java.util.Scanner;
+// an example of using Scanner
+public class ScannerMath {
+  public static void main(String[] args) {
+    Scanner keyboard;
+    int a, b;
+    double x, y;
+    keyboard = new Scanner(System.in);
+    System.out.print("Enter int no. 1: ");
+    a = keyboard.nextInt();
+    System.out.print("Enter int no. 2: ");
+    b = keyboard.nextInt();
+    System.out.print("You've entered " + a + " and " + b);
+    System.out.println(", and the product is " + a * b);
+    System.out.print("Enter double no. 1: ");
+    x = keyboard.nextDouble();
+    System.out.print("Enter double no. 2: ");
+    y = keyboard.nextDouble();
+    System.out.print("You've entered " + x + " and " + y);
+    System.out.println(", and the quotient is " + x / y);
+  }
+}

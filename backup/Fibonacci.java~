@@ -1,0 +1,11 @@
+public class Fibonacci {
+
+	public static void main(String[] args) {
+		int[] y = new int [100];
+		y[1] = 1;
+		for (int i = 2; i <= 40; i += 1) {
+			y[i] = y[i - 1] + y [i - 2];
+		}
+		System.out.println(y[29]);
+	}
+}

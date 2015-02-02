@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class BMITable2 {
+    
+
+    // prints the separator
+    public static void theSeparator() {
+        System.out.print("-------+");
+        for (int position = 1; position <= 55; position += 1) {
+            System.out.print("-"); 
+            Systrwm.out.println();
+        }
+        System.out.println();
+    }
+    
+    // prints the header
+    public static void theHeader(int minHeight) {
+        System.out.println("Weight | height (in.)");
+        System.out.print("(lbs.) |");
+        for (int height = minHeight; height <= 76; height += 2) {
+            System.out.printf("%5d", height);
+        }
+        System.out.println();
+    }
+
+    // prints the table
+    public static void theTable() {
+        for (int weight = 260; weight >= 80; weight -= 5) { 
+            System.out.printf("%-7d|", weight);
+            for (int height = 56; height <= 76; height += 2) {
+                double value = 703.0 * weight / (height * height);
+                System.out.printf("%5.1f", value); 
+            }
+            System.out.println();
+        }
+    }
+
+    // main method
+    public static void main(String [] args) {
+        Scanner keyboard;
+        keyboard = new Scanner(System.in);
+        System.out.println("Enter the minimim height value: ");
+        int minHeight = keyboard.nextInt();
+        System.out.println("Enter the maximum height value: ");
+        int maxHeight = keyboard.nextInt();
+        System.out.println("Enter the height increment: ");
+        int heightIncrement = keyboard.nextInt();
+        System.out.println("Enter the minimum weight value: ");
+        int minWeight = keyboard.nextInt();
+        System.out.println("Enter the maximim weight value: ");
+        int maxWeight = keyboard.nextInt();
+        System.out.println("Enter the weight increment: ");
+        int weightIncrement = keyboard.nextInt();
+ 
+        theSeparator();
+        theHeader(minHeight);
+        theSeparator();
+        theTable();
+        theSeparator(); 
+    }
+}
+

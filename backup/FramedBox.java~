@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class FramedBox {
+//--- print a rectangular box with "#" with a frame
+  //-- main method
+  public static void main(String[] args) {
+    int height, width;
+    Scanner keyboard;
+    keyboard = new Scanner(System.in);
+    // set height and width
+    System.out.print("Enter height: ");
+    height = keyboard.nextInt();
+    System.out.print("Enter width: ");
+    width = keyboard.nextInt();
+    // * * * * the top line * * * * //
+    System.out.print("+");
+    for (int horizontal = 0; horizontal < width; horizontal ++) {
+      System.out.print("-");
+    }
+    System.out.println("+");
+    // * * * * the middle lines * * * * //
+    for (int vertical = 0; vertical < height; vertical ++) {
+      System.out.print("|");
+      for (int horizontal = 0; horizontal < width; horizontal ++) {
+        System.out.print("#");
+      }
+      System.out.println("|");
+    }
+    // * * * * the bottom line * * * * //
+    System.out.print("+");
+    for (int horizontal = 0; horizontal < width; horizontal ++) {
+      System.out.print("-");
+    }
+    System.out.println("+");
+  }
+}
